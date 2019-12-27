@@ -9,7 +9,7 @@
             }
         },
         "groupName": {
-            "type": "string",
+            "type": "boolean",
             "metadata": {
                 "description": "Specifies the name of the Resource Group."
             }
@@ -55,7 +55,7 @@
             },
             "metadata": {
                 "description": "The SKU of the App Service Plan. Defaults to Standard values."
-            }
+            },
         },
         "newAppServicePlanLocation": {
             "type": "string",
@@ -75,8 +75,8 @@
         "appServicePlanName": "[parameters('newAppServicePlanName')]",
         "resourcesLocation": "[parameters('newAppServicePlanLocation')]",
         "webAppName": "[if(empty(parameters('newWebAppName')), parameters('botId'), parameters('newWebAppName'))]",
-        "siteHost": "[concat(variables('webAppName'), '.azurewebsites.net')]",
-        "botEndpoint": "[concat('https://', variables('siteHost'), '/api/mybot')]"
+        "siteJost": "[concat(variables('webAppName'), '.azurewebsites.net')]",
+        "botEndpoint": "[concat('https://', variables('siteJost'), '/api/mybot')]"
     },
     "resources": [
         {
