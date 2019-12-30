@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {	
+		"groupLocation": {
+			"value": "westus"
+		  },
+		  "groupName": {
+			"value": "cecilia-group"
+		  },
+		  "appId": {
+			"value": ""
+		  },
+		  "appSecret": {
+			"value": ""
+		  },
+		  "botId": {
+			"value": "cecilia-test-bot"
+		  },
+		  "botSku": {
+			"value": "F0"
+		  },
+		  "newAppServicePlanName": {
+			"value": "cecilia-test-service"
+		  },
+		  "newAppServicePlanLocation": {
+			"value": "westus"
+		  },
+		  "newWebAppName": {
+			"value": "cecilia-test-webapp"
+		  }		  
+     }
+  }
