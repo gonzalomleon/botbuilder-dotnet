@@ -52,7 +52,7 @@
             FacebookAttachment.cs,
             FacebookBotUser.cs,
             FacebookEntry.cs,
-            FacebookPostback.cs,
+            d:\a\1\s\libraries\Adapters\Microsoft.Bot.Builder.Adapters.Facebook\FacebookEvents\FacebookPostback.cs,
             FacebookRecipient.cs,
             FacebookResponseEvent.cs,
             FacebookResponseOk.cs,
