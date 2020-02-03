@@ -4,10 +4,44 @@ steps:
   inputs:
     command: test
     projects: |
-     Tests/**/*Tests.csproj
-     !**/Microsoft.Bot.ApplicationInsights.WebApi.Tests.csproj
-     !**/Microsoft.Bot.Builder.Integration.AspNet.WebApi.Tests.csproj
-    arguments: '-v n --configuration $(BuildConfiguration) --no-build --no-restore --filter "TestCategory!=IgnoreInAutomatedBuild&TestCategory!=FunctionalTests" /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+     Tests/**/*Facebook.Tests.csproj
+    arguments: '-v n --configuration debug --no-build --no-restore --filter "TestCategory!=IgnoreInAutomatedBuild&TestCategory!=FunctionalTests" /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+    /p:ExcludeByFile=
+    \".*/WebexMessageRequest.cs,
+      .*/WebexClientWrapper.cs,
+      .*/TwilioMessage.cs,
+      .*/TwilioAdapterOptions.cs,
+      .*/NewSlackMessage.cs,
+      .*/SlackResponse.cs,
+      .*/ActivityResourceResponse.cs,
+      .*/SlackAdapterOptions.cs,
+      .*/SlackClientWrapper.cs,
+      .*/SlackMessage.cs,
+      .*/SlackAction.cs,
+      .*/SlackEvent.cs,
+      .*/SlackPayload.cs,
+      .*/SlackRequestBody.cs,
+      .*/Button.cs,
+      .*/DefaultAction.cs,
+      .*/Element.cs,
+      .*/FacebookAttachment.cs,
+      .*/FacebookBotUser.cs,
+      .*/FacebookEntry.cs,
+      .*/FacebookPostback.cs,
+      .*/FacebookRecipient.cs,
+      .*/FacebookResponseEvent.cs,
+      .*/FacebookResponseOk.cs,
+      .*/FacebookQuickReply.cs,
+      .*/MessagePayload.cs,
+      .*/FacebookPassThreadControl.cs,
+      .*/FacebookRequestThreadControl.cs,
+      .*/FacebookTakeThreadControl.cs,
+      .*/FacebookThreadControl.cs,
+      .*/HandoverConstants.cs,
+      .*/AttachmentPayload.cs,
+      .*/CommonRegexParser.cs,
+      .*/ExpressionParser.cs,
+      .*/LGFileParser.cs"'
 
 - script: |
     dotnet tool install -g dotnet-reportgenerator-globaltool
