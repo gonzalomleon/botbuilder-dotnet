@@ -4,7 +4,7 @@
     <DataCollectors>
       <DataCollector friendlyName="XPlat code coverage">
         <Configuration>
-          <Format>cobertura</Format> 
+          <Format>cobertura</Format>
           <Include>
             Microsoft.Bot.Builder,               
             Microsoft.Bot.Builder.Adapters.Twilio,
@@ -31,45 +31,17 @@
             Microsoft.Bot.Builder.LanguageGeneration,                
             Microsoft.Bot.Builder.Schema
           </Include>
-          <ExcludeByFile>
-            WebexMessageRequest.cs,
-            WebexClientWrapper.cs,
-            TwilioMessage.cs,
-            TwilioAdapterOptions.cs,
-            NewSlackMessage.cs,
-            SlackResponse.cs,
-            ActivityResourceResponse.cs,
-            SlackAdapterOptions.cs,
-            SlackClientWrapper.cs,
-            SlackMessage.cs,
-            SlackAction.cs,
-            SlackEvent.cs,
-            SlackPayload.cs,
-            SlackRequestBody.cs,
-            Button.cs,
-            DefaultAction.cs,
-            Element.cs,
-            FacebookAttachment.cs,
-            FacebookBotUser.cs,
-            FacebookEntry.cs,
-            ..\libraries\Adapters\Microsoft.Bot.Builder.Adapters.Facebook\FacebookEvents\FacebookPostback.cs,
-            FacebookRecipient.cs,
-            FacebookResponseEvent.cs,
-            FacebookResponseOk.cs,
-            FacebookQuickReply.cs,
-            MessagePayload.cs,
-            FacebookPassThreadControl.cs,
-            FacebookRequestThreadControl.cs,
-            FacebookTakeThreadControl.cs,
-            FacebookThreadControl.cs,
-            HandoverConstants.cs,
-            AttachmentPayload.cs,
-            CommonRegexParser.cs,
-            ExpressionParser.cs,
-            LGFileParser.cs
-          </ExcludeByFile>
+          <ExcludeByFile>WebexMessageRequest.cs, WebexClientWrapper.cs, TwilioMessage.cs, TwilioAdapterOptions.cs, NewSlackMessage.cs, SlackResponse.cs, ActivityResourceResponse.cs, SlackAdapterOptions.cs, SlackClientWrapper.cs, SlackMessage.cs, SlackAction.cs, SlackEvent.cs, SlackPayload.cs, SlackRequestBody.cs, Button.cs, DefaultAction.cs, Element.cs, FacebookAttachment.cs, FacebookBotUser.cs, FacebookEntry.cs, FacebookPostback.cs, FacebookRecipient.cs, FacebookResponseEvent.cs, FacebookResponseOk.cs, FacebookQuickReply.cs, MessagePayload.cs, FacebookPassThreadControl.cs, FacebookRequestThreadControl.cs, FacebookTakeThreadControl.cs, FacebookThreadControl.cs, HandoverConstants.cs, AttachmentPayload.cs, CommonRegexParser.cs, ExpressionParser.cs, LGFileParser.cs</ExcludeByFile>
         </Configuration>
       </DataCollector>
     </DataCollectors>
   </DataCollectionRunSettings>
+  <InProcDataCollectionRunSettings>
+    <InProcDataCollectors>
+      <InProcDataCollector assemblyQualifiedName="Coverlet.Collector.DataCollection.CoverletInProcDataCollector, coverlet.collector, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null"
+                     friendlyName="XPlat Code Coverage"
+                     enabled="True"
+                     codebase="coverlet.collector.dll" />
+    </InProcDataCollectors>
+  </InProcDataCollectionRunSettings>
 </RunSettings>
