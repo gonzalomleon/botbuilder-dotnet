@@ -4,7 +4,7 @@ steps:
   inputs:
     command: test
     projects: |
-     Tests/**/*Facebook.Tests.csproj
+     Tests/**/*Tests.csproj
     arguments: '-v n --configuration debug --no-build --no-restore --filter "TestCategory!=IgnoreInAutomatedBuild&TestCategory!=FunctionalTests" --collect:"XPlat Code Coverage" --settings $(Build.SourcesDirectory)\CodeCoverageCoverlet.runsettings'
   condition: eq(variables['BuildConfiguration'],'Debug-Windows')
 
