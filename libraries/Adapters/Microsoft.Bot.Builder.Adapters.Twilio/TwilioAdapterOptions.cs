@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Microsoft.Bot.Builder.Adapters.Twilio
 {
@@ -17,6 +18,7 @@ namespace Microsoft.Bot.Builder.Adapters.Twilio
         /// <param name="twilioAccountSid">The account id.</param>
         /// <param name="twilioAuthToken">The authentication token.</param>
         /// <param name="twilioValidationUrl">The validation URL for incoming requests.</param>
+        [ExcludeFromCodeCoverage]
         public TwilioAdapterOptions(string twilioNumber, string twilioAccountSid, string twilioAuthToken, Uri twilioValidationUrl = null)
         {
             TwilioNumber = twilioNumber;
